@@ -1,0 +1,9 @@
+- name: Install vsftpd Server
+  yum:
+          name: vsftpd
+          state: latest
+
+- name: Start the ftp Server
+  service: 
+   name: vsftpd
+   state: started

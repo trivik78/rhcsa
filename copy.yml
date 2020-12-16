@@ -1,0 +1,11 @@
+---
+- name: copy hosts definition to Remote Server
+  hosts: db01
+  tasks:
+          - name: copy host file
+            copy:
+                   src: hosts
+                   dest: /tmp/hosts
+                   owner: root
+                   group: adm
+                   mode: "0600"

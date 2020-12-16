@@ -1,0 +1,7 @@
+---
+- name: testing patterns
+  hosts: all
+  serial: 2
+  tasks: 
+   - name: check ping
+     ping:

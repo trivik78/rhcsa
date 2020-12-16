@@ -1,0 +1,4 @@
+---
+# defaults file for motd
+#
+ server_admin: vivek@ats.com

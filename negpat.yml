@@ -1,0 +1,6 @@
+---
+- name: testing patterns
+  hosts: all,!dc2
+  tasks: 
+   - name: check ping
+     ping:

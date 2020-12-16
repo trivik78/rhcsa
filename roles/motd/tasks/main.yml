@@ -1,0 +1,16 @@
+---
+# tasks file for motd
+ - name: deliver motd file
+   template:
+           src: motd.j2
+           dest: /etc/motd
+           owner: root
+           group: root
+           mode: "0444"
+
+ - template:
+           src: allhosts.j2
+           dest: /etc/hosts
+           owner: root
+           group: root
+           mode: "0644"

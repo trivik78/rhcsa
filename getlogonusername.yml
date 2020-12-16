@@ -1,0 +1,7 @@
+---
+- name: fetch username
+  hosts: all
+  tasks:
+          - name: get name of logged in user
+            debug:
+                    msg: "{{ lookup('env','USER') }}"

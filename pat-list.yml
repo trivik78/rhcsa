@@ -1,0 +1,6 @@
+---
+- name: testing list patterns
+  hosts: 192.168.1.3,mnode1.ats.com,192.168.1.4
+  tasks: 
+   - name: check ping
+     ping:

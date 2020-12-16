@@ -1,0 +1,16 @@
+---
+- name: Test J2 Templates
+  hosts: all
+  tasks:
+          - name: List all facts
+            debug:
+                 msg: ansible_facts
+            
+          - name: Deploy j2 template based host file
+            
+            template:
+               src: hostname.j2
+               dest: /tmp/hosts
+               owner: root
+               group: root
+               mode: "0644"

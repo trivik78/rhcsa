@@ -1,0 +1,11 @@
+---
+- name: install and validate ftp deplyment
+  hosts: dc1
+  pre_tasks: 
+   debug: 
+     msg: "some task before import"
+  tasks:
+        - import_tasks: ftp.yml
+  post_tasks:
+  - debug:
+             msg: "post operation"
